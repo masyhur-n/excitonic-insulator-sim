@@ -51,9 +51,9 @@ Checks:
 Robustness: changing the GL fit range (1–3 k_BT) gives S_min = 120–204 mV/dec.
 All values stay above CMOS.
 
-**The steep switching does not survive fluctuations.** Both mean-field
+**The steep switching does not survive fluctuations.** The two mean-field
 sub-CMOS points (60.4 mV/dec at 350 K, 38.6 mV/dec at 300 K) come out at
-100–470 mV/dec, i.e. 1.5–8× worse than CMOS. The abrupt onset turns into a
+102–280 mV/dec, and all four cases lie at 100–470 mV/dec, i.e. 1.5–8× worse than CMOS. The abrupt onset turns into a
 smooth pseudogap crossover. This removes the last route to sub-CMOS switching found
 in the mean-field screen.
 

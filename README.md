@@ -15,8 +15,8 @@ at 300–350 K.
 **Main results**
 - Screening-limited ceiling: T_c ≤ Ry*/(4 r_s,c²). No hBN-encapsulated double layer reaches 300 K.
 - Graphene double layers at the BiSFET operating point do not condense under normal-state or superfluid-state screening.
-- Ta₂NiSe₅: the order is about 70% excitonic but needs the lattice. Only discrete symmetries are broken, so there is no superfluid.
-- The only sub-CMOS switching (an abrupt mean-field onset) disappears with Gaussian fluctuations: S = 100–470 mV/dec, and ≥ 285 mV/dec with gate electrostatics.
+- Ta₂NiSe₅: the order is about 70–77% excitonic but needs the lattice. Only discrete symmetries are broken, so there is no superfluid.
+- The only sub-CMOS switching (an abrupt mean-field onset) disappears with Gaussian fluctuations: S = 100–470 mV/dec with an ideal gate, and ≥ 285 mV/dec at 300 K with gate electrostatics.
 
 ## Reproducing the paper
 
@@ -42,8 +42,8 @@ python ml_v2.py 3000              # surrogate with uncertainty + inverse design 
 | Fig. 1, Sec. III A | `paper/make_figures.py` → `ei_model.py` | 2D crossover |
 | Fig. 2, Eq. (3), Sec. III B | `screening.py`, `tc_ceiling.py` | [docs/SCREENING.md](docs/SCREENING.md) |
 | Sec. III C | `dirac.py` | [docs/DIRAC.md](docs/DIRAC.md) |
-| Fig. 4, Sec. III D | `ta2nise5_chain.py` | [docs/TA2NISE5.md](docs/TA2NISE5.md) |
-| Fig. 3, Sec. III E | `device_scoring.py`, `fluctuations.py`, `real_gate.py`, `energy.py`, `disorder.py` | [docs/FLUCTUATIONS.md](docs/FLUCTUATIONS.md), [docs/GATE_MASS_DISORDER.md](docs/GATE_MASS_DISORDER.md), [docs/DEVICE_SCORING.md](docs/DEVICE_SCORING.md) |
+| Fig. 3, Sec. III D | `ta2nise5_chain.py` | [docs/TA2NISE5.md](docs/TA2NISE5.md) |
+| Fig. 4, Sec. III E | `device_scoring.py`, `fluctuations.py`, `real_gate.py`, `energy.py`, `disorder.py` | [docs/FLUCTUATIONS.md](docs/FLUCTUATIONS.md), [docs/GATE_MASS_DISORDER.md](docs/GATE_MASS_DISORDER.md), [docs/DEVICE_SCORING.md](docs/DEVICE_SCORING.md) |
 | Sec. III F | `ml_v2.py` | `ei_dataset_v2.csv` |
 
 ## Repository layout
@@ -100,4 +100,4 @@ against the published benchmarks in `run_benchmarks.py`.
 MIT (see [LICENSE](LICENSE)).
 
 ## Citation
-Software: N. Masyhur, *excitonic-insulator-sim*, Zenodo, doi:[10.5281/zenodo.23684703](https://doi.org/10.5281/zenodo.23684703) (all versions; v1.0.0: doi:10.5281/zenodo.23684704). See [CITATION.cff](CITATION.cff).
+Software: N. Masyhur, *excitonic-insulator-sim*, Zenodo, doi:[10.5281/zenodo.23684703](https://doi.org/10.5281/zenodo.23684703) (concept DOI, always resolves to the latest version). See [CITATION.cff](CITATION.cff).

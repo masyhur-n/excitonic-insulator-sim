@@ -29,7 +29,7 @@ bilayer pseudospin field-effect transistor, the gap vanishes under both normal-s
 screening. In Ta$_2$NiSe$_5$ the ordered state is mostly excitonic ($\approx$70--77\%) but requires the lattice, and its
 discrete symmetry breaking precludes superfluidity. The only sub-CMOS switching found, an abrupt
 mean-field gap onset, does not survive Gaussian fluctuations: the swing becomes 100--470~mV/decade at
-300--350~K, rising to $\ge$285~mV/decade once gate electrostatics are included. Switching energy at equal
+300--350~K with an ideal gate, and at least 285~mV/decade at 300~K once gate electrostatics are included. Switching energy at equal
 geometry is therefore 2--45 times higher than ideal CMOS. A machine-learning surrogate trained on the
 benchmarked physics finds no buildable design above $\approx$120~K with hBN dielectrics. These results identify
 2D phase stiffness under screening, rather than pairing, as the bottleneck for equilibrium excitonic low-power logic.
@@ -167,7 +167,7 @@ energy & BiSFET switching energy & 0.008 aJ~\cite{Banerjee2009} & 0.0044 aJ ($CV
 Figure~\ref{fig:crossover} shows the 2D crossover for MoSe$_2$/hBN/WSe$_2$-like parameters ($m_r=0.22$,
 $\epsilon=4.5$, $d=1.6$~nm). On the BCS side, $\Delta_k$ peaks at the Fermi wavevector and $v_k^2$ has a Fermi edge. On the BEC side, both are
 smooth. With the unscreened interaction, the mean-field pairing scale $T^*$ exceeds 350~K over most of the EI window, but the BKT bound keeps
-the condensation temperature below $\approx$200~K, and at only tens of kelvin near the crossover. Screening (Sec.~\ref{sec:ceiling}) removes the high-density end. This separation of $T^*$ and $T_c$ on the BEC side mirrors the cold-atom
+the condensation temperature below $\approx$200~K, and to only tens of kelvin near the crossover. Screening (Sec.~\ref{sec:ceiling}) removes the high-density end. This separation of $T^*$ and $T_c$ on the BEC side mirrors the cold-atom
 phase diagram~\cite{Randeria2014}. It is the first sign that the bottleneck is phase stiffness, not pairing.
 
 \begin{figure*}
@@ -185,7 +185,7 @@ gap exponentially~\cite{Neilson2014}. Combining this with $n_s\le n$ gives
 k_BT_c\le \frac{\mathrm{Ry}^*}{4r_{s,c}^2}\,\frac{4m_r}{m_e+m_h},
 \label{eq:ceiling}
 \end{equation}
-where equal masses is the most favourable case. With the MoSe$_2$/WSe$_2$ parameters of Ref.~\onlinecite{Zeng2020} ($m_r\approx0.2$, $\epsilon\approx5$, $d=a_B\approx1.3$~nm) the bound is 57~K. With the representative values used in Figs.~\ref{fig:crossover} and~\ref{fig:switch} ($m_r=0.22$, $\epsilon=4.5$, $d=1.6$~nm) it is 49~K, and at the thinnest barrier, $d=0.7$~nm, it is 112--121~K. Across $0.05\le m_r\le0.6$, $2\le\epsilon\le15$ and $0.6\le d\le3$~nm, no point
+where the equal-mass case is the most favourable. With the MoSe$_2$/WSe$_2$ parameters of Ref.~\onlinecite{Zeng2020} ($m_r\approx0.2$, $\epsilon\approx5$, $d=a_B\approx1.3$~nm) the bound is 57~K. With the representative values used in Figs.~\ref{fig:crossover} and~\ref{fig:switch} ($m_r=0.22$, $\epsilon=4.5$, $d=1.6$~nm) it is 49~K, and at the thinnest barrier, $d=0.7$~nm, it is 112--121~K. Across $0.05\le m_r\le0.6$, $2\le\epsilon\le15$ and $0.6\le d\le3$~nm, no point
 reaches 350~K, and none with $\epsilon\ge4.5$ reaches 300~K [Fig.~\ref{fig:ceiling}(b)]. The maximum is 328~K, reached at $\epsilon=2$. This result is unchanged when $r_{s,c}$ is extrapolated linearly below the smallest computed separation, $d/a_B=0.3$. Valley and spin
 degeneracy lower the bound further: more degenerate channels increase the polarisability and screen the pairing interaction more strongly, so the effective coupling falls. In the large-$N$ limit it scales as $1/N$, where $N$ is the number of fermion species~\cite{Kharitonov2008}.
 
@@ -227,7 +227,7 @@ contributions to the c--f hybridisation versus mean-field temperature.}
 The only sub-CMOS swing found in mean field comes from an abrupt gap onset where $T^*(E_g)$ crosses the
 operating temperature: 60.4~mV/decade at 350~K for MoSe$_2$/hBN/WSe$_2$ and 38.6~mV/decade at 300~K for WTe$_2$
 (Fig.~\ref{fig:switch}). Physically, thermal fluctuations of the pairing amplitude persist above the mean-field $T^*$ as a non-condensed pair gas, so the gap opens gradually rather than at a sharp transition. Gaussian fluctuations thus replace the onset with a smooth pseudogap crossover, giving
-$S=102$--140 and 137--280~mV/decade respectively across a factor-of-four range of momentum cut-off. The
+$S=102$--140 and 137--280~mV/decade respectively across a factor-of-four range of momentum cut-off; over both materials at both temperatures the range is 100--470~mV/decade. The
 Ginzburg--Landau quartic reproduces the mean-field amplitude to within 4\%. A real gate makes the situation
 worse. At 300~K, interlayer charging plus the thermal compressibility of the pair gas give $S\ge285$~mV/decade.
 A negative exchange compressibility~\cite{Zeng2020} alone would give 49~mV/decade, but this gain does not survive
