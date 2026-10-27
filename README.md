@@ -4,7 +4,7 @@
 
 Code and data for the article
 
-> **N. Masyhur, "Can excitonic-insulator switches beat CMOS? A benchmarked feasibility screen across the BEC–BCS crossover"** (manuscript in preparation; source in [`paper/`](paper/)).
+> **N. Masyhur, "Can excitonic-insulator switches beat CMOS? A benchmarked equilibrium bound across the BEC–BCS crossover"** (manuscript in preparation; source in [`paper/`](paper/)).
 
 Excitonic insulators and exciton condensates have been proposed as switches that beat the
 60 mV/decade thermionic limit of CMOS. This repository tests that proposal with a chain of

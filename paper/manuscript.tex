@@ -5,7 +5,7 @@
 
 \begin{document}
 
-\title{Can equilibrium excitonic-insulator switches beat CMOS? A benchmarked feasibility screen across the BEC--BCS crossover}
+\title{Can excitonic-insulator switches beat CMOS? A benchmarked equilibrium bound across the BEC--BCS crossover}
 
 \author{Nailah Masyhur}
 \email{nailahmasyhur@gmail.com}
@@ -16,8 +16,8 @@
 \begin{abstract}
 Exciton condensates and excitonic insulators have been proposed as switches that operate below the
 $\ln(10)k_BT/e \approx 60$~mV/decade thermionic limit of complementary metal-oxide-semiconductor (CMOS)
-transistors, which would reduce the energy cost of computing. We test this premise for gate-driven devices in
-thermal equilibrium, using mean-field models with Gaussian fluctuations in which every ingredient is first benchmarked against a published result:
+transistors, which would reduce the energy cost of computing. We test this premise for gate-driven devices whose ON and OFF states are in thermal equilibrium (quasi-static
+switching; transient dynamics are excluded), using mean-field models with Gaussian fluctuations in which every ingredient is first benchmarked against a published result:
 a two-dimensional (2D) electron--hole gap equation across the BEC--BCS crossover; self-consistent
 screening in the superfluid state, validated against diffusion quantum Monte Carlo (DQMC); massless Dirac
 bands for graphene double layers; a quasi-one-dimensional three-chain model of Ta$_2$NiSe$_5$ with
@@ -117,16 +117,16 @@ free energy along the mean-field pair shape, with stiffness $\hbar^2/2M$. The qu
 self-consistent Hartree (large-$N$) approximation~\cite{UllahDorsey1991,LarkinVarlamov2005} with Bose occupation of
 the pair modes, $\langle|\psi|^2\rangle=\sum_Q n_B(a+b\langle|\psi|^2\rangle+cQ^2)$. Gaussian fluctuations
 about the normal state are equivalent to the Nozi\`eres--Schmitt-Rink scheme~\cite{NozieresSchmittRink1985,Randeria2014}.
-The fluctuation-broadened gap follows the pseudogap form $\Delta^2=\Delta_{\rm sc}^2+\Delta_{\rm pg}^2$~\cite{Chen2005}.
+The fluctuation-broadened gap follows the pseudogap form $\Delta^2=\Delta_{\rm sc}^2+\Delta_{\rm pg}^2$~\cite{Chen2005}. Here $\Delta_{\rm pg}$ is the pairing amplitude of non-condensed pairs. It measures local pairing, not long-range phase coherence, which in 2D at $T>0$ is at most quasi-long-ranged~\cite{NelsonKosterlitz1977}. The spectral gap entering the swing therefore requires pairing but not coherence.
 Gate electrostatics follow Ref.~\onlinecite{Zeng2020}: $e\,dV=(C+d\mu_x/dn)\,dn$ with
 $C=4\pi e^2d_s/\epsilon$. A thermal compressibility term $k_BT/n$ is added because the pair gas is non-degenerate at 300~K.
 Disorder enters through the Abrikosov--Gor'kov equation as applied to bilayers~\cite{Bistritzer2008}.
 
 \subsection{Device metrics}
 For a gap-switching transistor we assume intrinsic activated conduction, $G\propto e^{-E_{\rm gap}/2k_BT}$~\cite{Sze2007}. The swing is then
-$S=2\ln(10)k_BT/|dE_{\rm gap}/d(eV)|$, which is compared with $S_{\rm CMOS}=\ln(10)k_BT/e$. This is an idealised off-state. It ignores
-sub-gap states and contact resistance, both of which would increase $S$, and band-to-band tunnelling, which is a distinct mechanism not
-evaluated here. The mean-field overestimate of $T_c$ by $(4e)^{1/3}\approx2.2$ was derived for weak-coupling contact interactions in
+$S=2\ln(10)k_BT/|dE_{\rm gap}/d(eV)|$, which is compared with $S_{\rm CMOS}=\ln(10)k_BT/e$. This treats the measured current as a direct probe of the thermodynamic gap. It assumes contacts in equilibrium with the channel and no
+parallel conduction paths. Sub-gap states, defect-mediated hopping and contact resistance would all make the measured $S$ worse than this
+bound. Band-to-band tunnelling is a distinct mechanism that is not evaluated here. The mean-field overestimate of $T_c$ by $(4e)^{1/3}\approx2.2$ was derived for weak-coupling contact interactions in
 three dimensions~\cite{GorkovMB1961,Randeria2014}. Here it is used only as a heuristic robustness check on whether pairing survives at the
 operating temperature. The conclusions of Sec.~\ref{sec:switch} hold without it, because the fluctuation analysis removes the sub-CMOS
 swing independently.
@@ -187,7 +187,7 @@ k_BT_c\le \frac{\mathrm{Ry}^*}{4r_{s,c}^2}\,\frac{4m_r}{m_e+m_h},
 \end{equation}
 where equal masses is the most favourable case. With the MoSe$_2$/WSe$_2$ parameters of Ref.~\onlinecite{Zeng2020} ($m_r\approx0.2$, $\epsilon\approx5$, $d=a_B\approx1.3$~nm) the bound is 57~K. With the representative values used in Figs.~\ref{fig:crossover} and~\ref{fig:switch} ($m_r=0.22$, $\epsilon=4.5$, $d=1.6$~nm) it is 49~K, and at the thinnest barrier, $d=0.7$~nm, it is 112--121~K. Across $0.05\le m_r\le0.6$, $2\le\epsilon\le15$ and $0.6\le d\le3$~nm, no point
 reaches 350~K, and none with $\epsilon\ge4.5$ reaches 300~K [Fig.~\ref{fig:ceiling}(b)]. The maximum is 328~K, reached at $\epsilon=2$. This result is unchanged when $r_{s,c}$ is extrapolated linearly below the smallest computed separation, $d/a_B=0.3$. Valley and spin
-degeneracy add screening channels and lower the bound further.
+degeneracy lower the bound further: more degenerate channels increase the polarisability and screen the pairing interaction more strongly, so the effective coupling falls. In the large-$N$ limit it scales as $1/N$, where $N$ is the number of fermion species~\cite{Kharitonov2008}.
 
 \begin{figure*}
 \includegraphics[width=\textwidth]{figs/fig2_screening_ceiling.pdf}
@@ -211,7 +211,7 @@ In the three-chain model (Fig.~\ref{fig:tns}) the order is cooperative. At $V=0.
 structural instability would need $\lambda\ge0.125$~eV, 2.5--6 times the estimate $\lambda\approx0.02$--0.05~eV inferred from the measured
 distortion~\cite{Kaneko2013}. Our implementation reproduces the published distortion threshold exactly, but it places the purely excitonic threshold 15\% higher ($V_c=0.69$ vs.\ 0.6~eV) and $k_BT_c$ 28\% lower than Ref.~\onlinecite{Kaneko2013} (Table~\ref{tab:bench}). Two alternative Fock decouplings bracket both published values, so the deviation reflects mean-field decoupling details given in that work's supplementary material. The thresholds are therefore sensitive to the decoupling at the 15--30\% level, whereas the excitonic share of the order is not: it stays at 74--77\% across decouplings at $V=0.55$~eV, $\lambda=0.04$~eV. We therefore claim only that the order is predominantly excitonic, not a precise ratio. The device conclusion for Ta$_2$NiSe$_5$ below rests on the symmetry analysis of Ref.~\onlinecite{Mazza2020}, not on these numbers. The mean-field $T_c$ divided by 2.2 gives 298--377~K, which brackets the measured
 326~K~\cite{Lu2017}. Symmetry analysis based on first-principles Wannier models shows that the transition
-breaks only discrete symmetries and that there is no excitonic superfluidity~\cite{Mazza2020}. This is consistent with the early observation that interband transitions in a homogeneous excitonic insulator fix the phase of the order parameter and make superfluidity impossible~\cite{LozovikYudson1976}. The structural
+breaks only discrete symmetries and that there is no excitonic superfluidity~\cite{Mazza2020}. The symmetry argument is as follows. Symmetry-allowed single-particle hybridisation between the Ta and Ni states explicitly breaks the continuous U(1) symmetry associated with the conservation of relative electron--hole number~\cite{Mazza2020}. The excitonic order then breaks only discrete lattice symmetries and is Ising-like. It has no gapless Goldstone mode, its collective modes are gapped, and it cannot carry a supercurrent~\cite{Mazza2020}. The same conclusion, that interband transitions fix the phase of the order parameter and make superfluidity impossible in a homogeneous excitonic insulator, was reached early on by Lozovik and Yudson~\cite{LozovikYudson1976}. The structural
 interpretation of Ref.~\onlinecite{Baldini2023} is compatible with our finding that the lattice decides
 whether order sets in. For devices, Ta$_2$NiSe$_5$ cannot host a counterflow condensate, and as a bulk crystal its gap can
 be tuned only by pressure or strain.
@@ -226,7 +226,7 @@ contributions to the c--f hybridisation versus mean-field temperature.}
 \subsection{Switching steepness and energy}\label{sec:switch}
 The only sub-CMOS swing found in mean field comes from an abrupt gap onset where $T^*(E_g)$ crosses the
 operating temperature: 60.4~mV/decade at 350~K for MoSe$_2$/hBN/WSe$_2$ and 38.6~mV/decade at 300~K for WTe$_2$
-(Fig.~\ref{fig:switch}). Gaussian fluctuations replace this onset with a smooth pseudogap crossover, giving
+(Fig.~\ref{fig:switch}). Physically, thermal fluctuations of the pairing amplitude persist above the mean-field $T^*$ as a non-condensed pair gas, so the gap opens gradually rather than at a sharp transition. Gaussian fluctuations thus replace the onset with a smooth pseudogap crossover, giving
 $S=102$--140 and 137--280~mV/decade respectively across a factor-of-four range of momentum cut-off. The
 Ginzburg--Landau quartic reproduces the mean-field amplitude to within 4\%. A real gate makes the situation
 worse. At 300~K, interlayer charging plus the thermal compressibility of the pair gas give $S\ge285$~mV/decade.
@@ -271,7 +271,9 @@ mean field with Gaussian fluctuations, without vortex dynamics or vertex correct
 Ref.~\onlinecite{Neilson2014}; (ii) no intralayer exchange in the continuum model, which changes the sign of the
 exciton--exciton interaction compared with Ref.~\onlinecite{Zeng2020}; we use both as brackets; (iii) a 15--28\%
 deviation from two Ta$_2$NiSe$_5$ numbers of Ref.~\onlinecite{Kaneko2013}. Its mean-field equations are given in supplementary material that was not used here, and two alternative Fock decouplings bracket the published values; and (iv) no transport, contact or circuit modelling. Non-equilibrium (optical) switching in Ta$_2$NiSe$_5$ and cryogenic
-operation, where the CMOS limit falls to 15~mV/decade at 77~K, lie outside this screen.
+operation, where the CMOS limit falls to 15~mV/decade at 77~K, lie outside this screen. Extending the bound to driven systems would require
+time-dependent treatments of the order parameter coupled to the pump field, such as time-dependent mean-field or non-equilibrium
+Green's-function approaches, together with transport calculations that include the contacts and the energy cost of the drive.
 
 \section{Conclusion}
 Within benchmarked equilibrium models of 2D parabolic, Dirac and quasi-one-dimensional excitonic systems, gate-driven

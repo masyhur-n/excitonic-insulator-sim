@@ -2,7 +2,7 @@
   "title": "excitonic-insulator-sim: a benchmarked feasibility screen of excitonic-insulator switches",
   "upload_type": "software",
   "creators": [{"name": "Masyhur, Nailah", "affiliation": "Universitas Indonesia"}],
-  "description": "Code and data for 'Can excitonic-insulator switches beat CMOS? A benchmarked feasibility screen across the BEC-BCS crossover'. Each model ingredient reproduces published benchmarks (run_benchmarks.py).",
+  "description": "Code and data for 'Can excitonic-insulator switches beat CMOS? A benchmarked equilibrium bound across the BEC-BCS crossover'. Each model ingredient reproduces published benchmarks (run_benchmarks.py).",
   "license": "MIT",
   "keywords": ["excitonic insulator", "BEC-BCS crossover", "exciton condensate", "beyond-CMOS", "Ta2NiSe5", "screening"]
 }
