@@ -38,15 +38,15 @@ Every reference used in the code, documentation or manuscript, with how it was c
 |---|---|---|
 | H. Min, R. Bistritzer, J.-J. Su, A. H. MacDonald, PRB 78, 121401(R) (2008), arXiv:0802.3462 | Dirac two-band model, chirality factor (Eq. 3), T_KT ≤ E_F/8 (p.3) | FULL |
 | G. Mazza et al., PRL 124, 197601 (2020), arXiv:1911.11835 | discrete symmetry breaking in Ta₂NiSe₅; "no dissipationless transport or excitonic superfluidity" (p.5) | FULL |
-| D. R. Nelson & J. M. Kosterlitz, PRL 39, 1201 (1977) | universal jump, T_BKT bound | ABS |
+| D. R. Nelson & J. M. Kosterlitz, PRL 39, 1201 (1977) | universal jump, T_BKT bound | FULL: Eq. (10), m²k_BT_c/ħ²ρ_s = π/2 with ρ_s = m n_s, i.e. k_BT_c = πħ²n_s/2m |
 | L. V. Keldysh & Yu. V. Kopaev, Sov. Phys. Solid State 6, 2219 (1965) | BCS-like excitonic insulator | ABS (citation only; no full text found) |
 | Yu. E. Lozovik & V. I. Yudson, Sov. Phys. JETP 44, 389 (1976) | spatially separated pairing | ABS |
-| T. C. Berkelbach, M. S. Hybertsen, D. R. Reichman, PRB 88, 045318 (2013) | Rytova–Keldysh 2D potential | ABS |
+| T. C. Berkelbach, M. S. Hybertsen, D. R. Reichman, PRB 88, 045318 (2013) | Rytova–Keldysh 2D potential | FULL: Eq. (3) (real space). Its Fourier transform is the V(q) = 2πe²/[εq(1+r₀q)] used here, with ε = (ε₁+ε₂)/2 and r₀ = ρ₀, checked numerically |
 | P. Nozières & S. Schmitt-Rink, J. Low Temp. Phys. 59, 195 (1985) | NSR = Gaussian fluctuations | CIT (Randeria & Taylor ref. 16) |
 | L. P. Gor'kov & T. K. Melik-Barkhudarov, Zh. Eksp. Teor. Fiz. 40, 1452 (1961) | (4e)^{1/3} ≈ 2.2 mean-field overestimate | CIT (Randeria & Taylor ref. 38, p.10) |
-| Q. Chen, J. Stajic, S. Tan, K. Levin, Phys. Rep. 412, 1 (2005) | pseudogap Δ² = Δ_sc² + Δ_pg² | CIT (Randeria & Taylor ref. 12) |
+| Q. Chen, J. Stajic, S. Tan, K. Levin, Phys. Rep. 412, 1 (2005), arXiv:cond-mat/0404274 | pseudogap Δ²(T) = Δ_sc²(T) + Δ_pg²(T) | FULL: Eqs. (7), (10), (65); Δ_pg² = −Σ_Q t_pg(Q), Eq. (91) |
 | S. Ullah & A. T. Dorsey, "Effect of fluctuations on the transport properties of type-II superconductors in a magnetic field", PRB 44, 262 (1991), doi:10.1103/PhysRevB.44.262 | self-consistent Hartree treatment of the GL quartic term | ABS; title, volume and pages confirmed via Crossref |
-| A. Larkin & A. Varlamov, *Theory of Fluctuations in Superconductors* (OUP, 2005) | GL fluctuation theory | ABS (publisher record) |
+| A. Larkin & A. Varlamov, *Fluctuation phenomena in superconductors*, arXiv:cond-mat/0109177 (2001) | GL fluctuation theory; self-consistent Hartree beyond Gaussian order (p.91, crediting Ullah & Dorsey) | FULL |
 | Gibbs–Bogoliubov–Feynman inequality | variational Landau function | textbook |
 | A. Perali, D. Neilson, A. R. Hamilton, PRL 110, 146803 (2013) | screening, double-bilayer graphene | ABS |
 | S. De Palo, F. Rapisarda, G. Senatore, PRL 88, 206401 (2002), arXiv:cond-mat/0201414 | DQMC phase boundary (values taken as reproduced in Neilson et al. 2014) | FULL (downloaded) |
@@ -56,9 +56,9 @@ Every reference used in the code, documentation or manuscript, with how it was c
 | reference | used for | status |
 |---|---|---|
 | International Energy Agency, *Energy and AI* (2025) | data-centre electricity ~415 TWh (2024) → ~945 TWh (2030) | ABS (IEA summary page + secondary coverage) |
-| A. M. Ionescu & H. Riel, Nature 479, 329 (2011), doi:10.1038/nature10679 | 60 mV/decade thermionic limit | ABS (one page of the full text seen) |
+| A. M. Ionescu & H. Riel, Nature 479, 329 (2011), doi:10.1038/nature10679 | 60 mV/decade thermionic limit | FULL: Eq. (1), S ≥ (kT/q) ln 10 ≈ 60 mV/decade at 300 K |
 | D. Unuchek et al., Nature 560, 340 (2018) | room-temperature excitonic transistor without condensate | ABS |
-| S. M. Sze & K. K. Ng, *Physics of Semiconductor Devices*, 3rd ed. (Wiley, 2007) | intrinsic activation n_i ∝ e^{−E_g/2k_BT} (cited in the manuscript) | textbook ⚠ equation not re-checked |
+| S. M. Sze & K. K. Ng, *Physics of Semiconductor Devices*, 3rd ed. (Wiley, 2007) | intrinsic activation (cited in the manuscript) | FULL: p.20, Eq. (28), n_i = √(N_C N_V) exp(−E_g/2kT) |
 
 ## Materials (experiment)
 
@@ -77,6 +77,10 @@ Every reference used in the code, documentation or manuscript, with how it was c
 
 ## Software
 F. Pedregosa et al., *Scikit-learn*, J. Mach. Learn. Res. 12, 2825 (2011).
+
+## Still not read in full
+- L. V. Keldysh & Yu. V. Kopaev (1965); Yu. E. Lozovik & V. I. Yudson (1976). Both are background citations; the
+  bibliographic details are confirmed from later papers that cite them.
 
 ## Not sourced (stated as such in the manuscript)
 - The illustrative model parameters in `materials.py` (m_r, ε, r0, d, E_g) for
