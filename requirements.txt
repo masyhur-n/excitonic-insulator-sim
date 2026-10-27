@@ -1,0 +1,5 @@
+# tested with Python 3.13
+numpy>=1.26      # tested 2.5.3
+scipy>=1.11      # tested 1.18.1
+matplotlib>=3.8  # tested 3.11.2
+scikit-learn>=1.4  # tested 1.9.1
