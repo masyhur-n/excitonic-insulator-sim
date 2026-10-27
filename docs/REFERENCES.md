@@ -39,8 +39,7 @@ Every reference used in the code, documentation or manuscript, with how it was c
 | H. Min, R. Bistritzer, J.-J. Su, A. H. MacDonald, PRB 78, 121401(R) (2008), arXiv:0802.3462 | Dirac two-band model, chirality factor (Eq. 3), T_KT ≤ E_F/8 (p.3) | FULL |
 | G. Mazza et al., PRL 124, 197601 (2020), arXiv:1911.11835 | discrete symmetry breaking in Ta₂NiSe₅; "no dissipationless transport or excitonic superfluidity" (p.5) | FULL |
 | D. R. Nelson & J. M. Kosterlitz, PRL 39, 1201 (1977) | universal jump, T_BKT bound | FULL: Eq. (10), m²k_BT_c/ħ²ρ_s = π/2 with ρ_s = m n_s, i.e. k_BT_c = πħ²n_s/2m |
-| L. V. Keldysh & Yu. V. Kopaev, Sov. Phys. Solid State 6, 2219 (1965) | BCS-like excitonic insulator | ABS (citation only; no full text found) |
-| Yu. E. Lozovik & V. I. Yudson, Sov. Phys. JETP 44, 389 (1976) | spatially separated pairing | ABS |
+| Yu. E. Lozovik & V. I. Yudson, Sov. Phys. JETP 44, 389 (1976) [ZhETF 71, 738] | pairing of spatially separated e and h is superfluid (counterflow currents, Introduction); interband transitions in a homogeneous EI fix the phase and make superfluidity impossible (Introduction) | FULL |
 | T. C. Berkelbach, M. S. Hybertsen, D. R. Reichman, PRB 88, 045318 (2013) | Rytova–Keldysh 2D potential | FULL: Eq. (3) (real space). Its Fourier transform is the V(q) = 2πe²/[εq(1+r₀q)] used here, with ε = (ε₁+ε₂)/2 and r₀ = ρ₀, checked numerically |
 | P. Nozières & S. Schmitt-Rink, J. Low Temp. Phys. 59, 195 (1985) | NSR = Gaussian fluctuations | CIT (Randeria & Taylor ref. 16) |
 | L. P. Gor'kov & T. K. Melik-Barkhudarov, Zh. Eksp. Teor. Fiz. 40, 1452 (1961) | (4e)^{1/3} ≈ 2.2 mean-field overestimate | CIT (Randeria & Taylor ref. 38, p.10) |
@@ -79,12 +78,8 @@ Every reference used in the code, documentation or manuscript, with how it was c
 F. Pedregosa et al., *Scikit-learn*, J. Mach. Learn. Res. 12, 2825 (2011).
 
 ## Removed from the manuscript (full text not obtained)
-- L. V. Keldysh & Yu. V. Kopaev, Sov. Phys. Solid State 6, 2219 (1965). A reprint exists in a World Scientific
-  volume, doi:10.1142/9789811279461_0006 (found via Crossref).
-- Yu. E. Lozovik & V. I. Yudson, Sov. Phys. JETP 44, 389 (1976). Available free from the JETP archive (jetp.ras.ru).
-The statements they supported are now cited to papers read in full: Kaneko et al. 2013 (BCS/BEC description of the
-EI), Pieri et al. 2007 (spatially separated e–h bilayers) and Min et al. 2008 (counterflow superfluidity). Either
-original can be re-added once its full text has been checked.
+- L. V. Keldysh & Yu. V. Kopaev, Sov. Phys. Solid State 6, 2219 (1965). Its statement is cited instead to
+  Jérome et al. (1967) and Kaneko et al. (2013).
 
 ## Not sourced (stated as such in the manuscript)
 - The illustrative model parameters in `materials.py` (m_r, ε, r0, d, E_g) for
@@ -105,6 +100,6 @@ original can be re-added once its full text has been checked.
 ## Bibliographic check
 All journal entries in `paper/refs.bib` were checked against Crossref (title,
 volume, first page) on 2026-10-27, and DOIs were added for 30 of them. The entries
-without a Crossref DOI are the Soviet journals (Keldysh–Kopaev 1965,
+without a Crossref DOI are the Soviet journals (
 Lozovik–Yudson 1976, Gor'kov–Melik-Barkhudarov 1961), J. Low Temp. Phys. 1985,
 JMLR 2011, the IEA report and the Larkin–Varlamov book.
