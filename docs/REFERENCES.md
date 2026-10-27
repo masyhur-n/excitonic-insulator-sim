@@ -100,6 +100,6 @@ F. Pedregosa et al., *Scikit-learn*, J. Mach. Learn. Res. 12, 2825 (2011).
 ## Bibliographic check
 All journal entries in `paper/refs.bib` were checked against Crossref (title,
 volume, first page) on 2026-10-27, and DOIs were added for 30 of them. The entries
-without a Crossref DOI are the Soviet journals (
-Lozovik–Yudson 1976, Gor'kov–Melik-Barkhudarov 1961), J. Low Temp. Phys. 1985,
-JMLR 2011, the IEA report and the Larkin–Varlamov book.
+without a Crossref DOI are the Soviet journals (Lozovik–Yudson 1976,
+Gor'kov–Melik-Barkhudarov 1961), J. Low Temp. Phys. 1985, JMLR 2011, the IEA report,
+the Larkin–Varlamov arXiv review and the Sze–Ng textbook.
