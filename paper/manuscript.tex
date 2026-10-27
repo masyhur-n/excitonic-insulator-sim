@@ -5,7 +5,7 @@
 
 \begin{document}
 
-\title{Can excitonic-insulator switches beat CMOS? A benchmarked feasibility screen across the BEC--BCS crossover}
+\title{Can equilibrium excitonic-insulator switches beat CMOS? A benchmarked feasibility screen across the BEC--BCS crossover}
 
 \author{Nailah Masyhur}
 \email{nailahmasyhur@gmail.com}
@@ -16,8 +16,8 @@
 \begin{abstract}
 Exciton condensates and excitonic insulators have been proposed as switches that operate below the
 $\ln(10)k_BT/e \approx 60$~mV/decade thermionic limit of complementary metal-oxide-semiconductor (CMOS)
-transistors, which would reduce the energy cost of computing. We test this premise with a set of
-mean-field models in which every ingredient is first benchmarked against a published result:
+transistors, which would reduce the energy cost of computing. We test this premise for gate-driven devices in
+thermal equilibrium, using mean-field models with Gaussian fluctuations in which every ingredient is first benchmarked against a published result:
 a two-dimensional (2D) electron--hole gap equation across the BEC--BCS crossover; self-consistent
 screening in the superfluid state, validated against diffusion quantum Monte Carlo (DQMC); massless Dirac
 bands for graphene double layers; a quasi-one-dimensional three-chain model of Ta$_2$NiSe$_5$ with
@@ -26,13 +26,14 @@ Abrikosov--Gor'kov disorder. Screening together with the Nelson--Kosterlitz boun
 $T_c \le \mathrm{Ry}^*/4r_{s,c}^2$, where $r_{s,c}(d/a_B)$ is the density at which the superfluid appears.
 No hBN-encapsulated double layer reaches 300~K. For monolayer-graphene double layers at the operating point of the
 bilayer pseudospin field-effect transistor, the gap vanishes under both normal-state and superfluid-state
-screening. In Ta$_2$NiSe$_5$ the ordered state is $\approx$70\% excitonic but requires the lattice, and its
+screening. In Ta$_2$NiSe$_5$ the ordered state is mostly excitonic ($\approx$70--77\%) but requires the lattice, and its
 discrete symmetry breaking precludes superfluidity. The only sub-CMOS switching found, an abrupt
 mean-field gap onset, does not survive Gaussian fluctuations: the swing becomes 100--470~mV/decade at
 300--350~K, rising to $\ge$285~mV/decade once gate electrostatics are included. Switching energy at equal
 geometry is therefore 2--45 times higher than ideal CMOS. A machine-learning surrogate trained on the
 benchmarked physics finds no buildable design above $\approx$120~K with hBN dielectrics. These results identify
-2D phase stiffness under screening, rather than pairing, as the bottleneck for excitonic low-power logic.
+2D phase stiffness under screening, rather than pairing, as the bottleneck for equilibrium excitonic low-power logic.
+Tunnelling-based and non-equilibrium switching mechanisms lie outside this screen.
 \end{abstract}
 
 \maketitle
@@ -122,10 +123,13 @@ $C=4\pi e^2d_s/\epsilon$. A thermal compressibility term $k_BT/n$ is added becau
 Disorder enters through the Abrikosov--Gor'kov equation as applied to bilayers~\cite{Bistritzer2008}.
 
 \subsection{Device metrics}
-For a gap-switching transistor with activated conduction $G\propto e^{-E_{\rm gap}/2k_BT}$, the swing is
-$S=2\ln(10)k_BT/|dE_{\rm gap}/d(eV)|$, which is compared with $S_{\rm CMOS}=\ln(10)k_BT/e$.
-The mean-field overestimate of $T_c$ by $(4e)^{1/3}\approx2.2$~\cite{GorkovMB1961,Randeria2014} is
-applied as a robustness correction when deciding whether pairing survives at the operating temperature.
+For a gap-switching transistor we assume intrinsic activated conduction, $G\propto e^{-E_{\rm gap}/2k_BT}$~\cite{Sze2007}. The swing is then
+$S=2\ln(10)k_BT/|dE_{\rm gap}/d(eV)|$, which is compared with $S_{\rm CMOS}=\ln(10)k_BT/e$. This is an idealised off-state. It ignores
+sub-gap states and contact resistance, both of which would increase $S$, and band-to-band tunnelling, which is a distinct mechanism not
+evaluated here. The mean-field overestimate of $T_c$ by $(4e)^{1/3}\approx2.2$ was derived for weak-coupling contact interactions in
+three dimensions~\cite{GorkovMB1961,Randeria2014}. Here it is used only as a heuristic robustness check on whether pairing survives at the
+operating temperature. The conclusions of Sec.~\ref{sec:switch} hold without it, because the fluctuation analysis removes the sub-CMOS
+swing independently.
 For the BiSFET, the criterion is a 2D condensate at the operating temperature. Switching energy at equal geometry scales
 as $(S_{\rm EI}/S_{\rm CMOS})^2$. As a sanity check, $C_gWLV^2$ for the BiSFET geometry gives 0.0044~aJ, against the
 SPICE value of 0.008~aJ~\cite{Banerjee2009}.
@@ -203,9 +207,9 @@ do not condense at useful temperatures under either screening treatment validate
 the conclusion of Ref.~\onlinecite{Neilson2014} for monolayer graphene at 1~nm separation.
 
 \subsection{Ta$_2$NiSe$_5$}
-In the three-chain model (Fig.~\ref{fig:tns}) the order is cooperative. At $V=0.55$~eV, below the purely excitonic threshold, order appears only for $0.02<\lambda<0.04$~eV or larger. For $\lambda=0.04$--0.05~eV, 69--74\% of the c--f hybridisation is excitonic. A purely
+In the three-chain model (Fig.~\ref{fig:tns}) the order is cooperative. At $V=0.55$~eV, below the purely excitonic threshold, order appears only for $0.02<\lambda<0.04$~eV or larger. For $\lambda=0.04$--0.05~eV, 69--74\% of the c--f hybridisation is excitonic, and 77\% with the alternative decoupling discussed below. A purely
 structural instability would need $\lambda\ge0.125$~eV, 2.5--6 times the estimate $\lambda\approx0.02$--0.05~eV inferred from the measured
-distortion~\cite{Kaneko2013}. Our implementation reproduces the published distortion threshold exactly, but it places the purely excitonic threshold 15\% higher ($V_c=0.69$ vs.\ 0.6~eV) and $k_BT_c$ 28\% lower than Ref.~\onlinecite{Kaneko2013} (Table~\ref{tab:bench}). Two alternative Fock decouplings bracket both published values, so the deviation reflects mean-field decoupling details given in that work's supplementary material. The device conclusion for Ta$_2$NiSe$_5$ below rests on the symmetry analysis of Ref.~\onlinecite{Mazza2020}, not on these numbers. The mean-field $T_c$ divided by 2.2 gives 298--377~K, which brackets the measured
+distortion~\cite{Kaneko2013}. Our implementation reproduces the published distortion threshold exactly, but it places the purely excitonic threshold 15\% higher ($V_c=0.69$ vs.\ 0.6~eV) and $k_BT_c$ 28\% lower than Ref.~\onlinecite{Kaneko2013} (Table~\ref{tab:bench}). Two alternative Fock decouplings bracket both published values, so the deviation reflects mean-field decoupling details given in that work's supplementary material. The thresholds are therefore sensitive to the decoupling at the 15--30\% level, whereas the excitonic share of the order is not: it stays at 74--77\% across decouplings at $V=0.55$~eV, $\lambda=0.04$~eV. We therefore claim only that the order is predominantly excitonic, not a precise ratio. The device conclusion for Ta$_2$NiSe$_5$ below rests on the symmetry analysis of Ref.~\onlinecite{Mazza2020}, not on these numbers. The mean-field $T_c$ divided by 2.2 gives 298--377~K, which brackets the measured
 326~K~\cite{Lu2017}. Symmetry analysis based on first-principles Wannier models shows that the transition
 breaks only discrete symmetries and that there is no excitonic superfluidity~\cite{Mazza2020}. The structural
 interpretation of Ref.~\onlinecite{Baldini2023} is compatible with our finding that the lattice decides
@@ -219,7 +223,7 @@ contributions to the c--f hybridisation versus mean-field temperature.}
 \label{fig:tns}
 \end{figure}
 
-\subsection{Switching steepness and energy}
+\subsection{Switching steepness and energy}\label{sec:switch}
 The only sub-CMOS swing found in mean field comes from an abrupt gap onset where $T^*(E_g)$ crosses the
 operating temperature: 60.4~mV/decade at 350~K for MoSe$_2$/hBN/WSe$_2$ and 38.6~mV/decade at 300~K for WTe$_2$
 (Fig.~\ref{fig:switch}). Gaussian fluctuations replace this onset with a smooth pseudogap crossover, giving
@@ -241,14 +245,28 @@ Gaussian fluctuations. (b) Subthreshold swing, compared with the CMOS limit.}
 \subsection{Machine-learning screen}
 A bootstrap ensemble of gradient-boosted trees~\cite{Pedregosa2011} was trained on 3000 solver labels
 $T_c=\min(T^*/2.2,\,T_{\rm BKT},\,\text{Eq.~(\ref{eq:ceiling})})$, with $0.01\le m_r\le1$, mass ratio 0.2--5,
-$1.5\le\epsilon\le15$ and $0.3\le d\le10$~nm. On held-out data it reaches $R^2=0.87$ with a mean absolute error of 1.3~K, and 95\% of points
-fall within $2\sigma$. Inverse design over $2\times10^5$ candidates, followed by verification with the full solver, gives at most
+$1.5\le\epsilon\le15$ and $0.3\le d\le10$~nm. On held-out data it reaches $R^2=0.87$ with a mean absolute error of 1.3~K, and 95\% of held-out points lie within the ensemble's own $\pm2\sigma$ predictive interval, so its uncertainty estimates are calibrated. Inverse design over $2\times10^5$ candidates, followed by verification with the full solver, gives at most
 $\approx117$~K for $\epsilon\ge4.5$ and $\approx233$~K for $\epsilon\approx1.6$. One label of 3000 exceeds 350~K, at
-$\epsilon=1.7$, $d=0.58$~nm and $E_g=-1.4$~eV, which is not a realistic device.
+$\epsilon=1.7$, $d=0.58$~nm and $E_g=-1.4$~eV, which is not a realistic device. The surrogate only interpolates the benchmarked model. It cannot discover mechanisms the model does not contain, so the inverse design bounds what this framework allows, not what all materials allow.
 
-\section{Discussion and limitations}
-The conclusion is robust because every ingredient that could raise $T_c$ was treated optimistically: equal masses,
-$n_s=n$, an ideal gate in the bound, and single-species screening. The main limitations are: (i) static
+\section{Robustness, scope and limitations}
+Several ingredients that could raise $T_c$ were treated optimistically: equal masses, $n_s=n$, an ideal gate in the bound, and
+single-species screening. The main conclusions were tested against the most consequential approximations as follows.
+
+\textit{Screening model.} Using the DQMC onset ($r_{s,c}\approx2.5$ at $d=a_B$~\cite{Neilson2014}) instead of the SS mean field gives
+51~K for the MoSe$_2$/WSe$_2$ parameters of Ref.~\onlinecite{Zeng2020}. DQMC includes dynamic screening and vertex
+corrections~\cite{Neilson2014}. Reaching 300~K there would require $r_{s,c}\le1.03$, less than half of both the SS and DQMC values. In the
+most favourable hBN corner of the parameter box ($\epsilon=4.5$, $d=0.6$~nm), the ceiling is 146~K. It would reach 300~K only if the
+true onset lay $\approx$30\% below the DQMC value. This is the margin by which the hBN conclusion depends on the screening physics.
+
+\textit{Intralayer exchange.} It enters the compressibility $d\mu_x/dn$ and hence the gate response, which we bracket using the
+exchange-dominated value of Ref.~\onlinecite{Zeng2020}. At 300~K the thermal compressibility $k_BT/n$ dominates both brackets. The
+ceiling of Eq.~(\ref{eq:ceiling}) does not involve the compressibility.
+
+\textit{Ta$_2$NiSe$_5$.} The thresholds depend on the mean-field decoupling; the excitonic share and the absence of superfluidity do not
+(Sec.~III D).
+
+\textit{Scope.} Only equilibrium, gate-driven operation is evaluated. The main limitations are: (i) static
 mean field with Gaussian fluctuations, without vortex dynamics or vertex corrections beyond those tested in
 Ref.~\onlinecite{Neilson2014}; (ii) no intralayer exchange in the continuum model, which changes the sign of the
 exciton--exciton interaction compared with Ref.~\onlinecite{Zeng2020}; we use both as brackets; (iii) a 15--28\%
@@ -256,8 +274,9 @@ deviation from two Ta$_2$NiSe$_5$ numbers of Ref.~\onlinecite{Kaneko2013}. Its m
 operation, where the CMOS limit falls to 15~mV/decade at 77~K, lie outside this screen.
 
 \section{Conclusion}
-Within benchmarked models of 2D parabolic, Dirac and quasi-one-dimensional excitonic systems, excitonic-insulator
-switches do not beat CMOS in subthreshold swing or switching energy at 300--350~K. Room-temperature pairing is
+Within benchmarked equilibrium models of 2D parabolic, Dirac and quasi-one-dimensional excitonic systems, gate-driven
+excitonic-insulator switches do not beat CMOS in subthreshold swing or switching energy at 300--350~K. Tunnelling-based and
+non-equilibrium (e.g.\ optically driven) excitonic switches are not ruled out by this analysis. Room-temperature pairing is
 possible, but screening-limited 2D condensation is not. The steep switching that appears in mean field is an
 artefact that Gaussian fluctuations remove. The design rule of Eq.~(\ref{eq:ceiling}) and the open code provide
 a quantitative test for future excitonic device proposals.

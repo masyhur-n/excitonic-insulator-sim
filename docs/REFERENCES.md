@@ -58,7 +58,7 @@ Every reference used in the code, documentation or manuscript, with how it was c
 | International Energy Agency, *Energy and AI* (2025) | data-centre electricity ~415 TWh (2024) → ~945 TWh (2030) | ABS (IEA summary page + secondary coverage) |
 | A. M. Ionescu & H. Riel, Nature 479, 329 (2011), doi:10.1038/nature10679 | 60 mV/decade thermionic limit | ABS (one page of the full text seen) |
 | D. Unuchek et al., Nature 560, 340 (2018) | room-temperature excitonic transistor without condensate | ABS |
-| S. M. Sze, *Physics of Semiconductor Devices* | intrinsic activation n_i ∝ e^{−E_g/2k_BT} | textbook ⚠ |
+| S. M. Sze & K. K. Ng, *Physics of Semiconductor Devices*, 3rd ed. (Wiley, 2007) | intrinsic activation n_i ∝ e^{−E_g/2k_BT} (cited in the manuscript) | textbook ⚠ equation not re-checked |
 
 ## Materials (experiment)
 
@@ -88,6 +88,11 @@ F. Pedregosa et al., *Scikit-learn*, J. Mach. Learn. Res. 12, 2825 (2011).
 - ⚠ Not verified at all: Comte & Nozières, J. Physique 43, 1069 (1982), Part I;
   Keldysh, JETP Lett. 29, 658 (1979) (journal name uncertain). Neither is cited
   in the manuscript.
+
+## Robustness numbers quoted in the manuscript (Sec. IV)
+- Ceiling with the DQMC onset r_s,c ≈ 2.5 (d = a_B), Zeng–MacDonald parameters: 51 K. 300 K would need r_s,c ≤ 1.03.
+- Best hBN corner of the parameter box: 146 K. It would reach 300 K only for an onset about 30% below DQMC.
+- Ta₂NiSe₅ excitonic share at V = 0.55, λ = 0.04 eV: 0.74 (both bonds) and 0.77 (alternative decoupling).
 
 ## Bibliographic check
 All journal entries in `paper/refs.bib` were checked against Crossref (title,
