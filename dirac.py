@@ -130,7 +130,8 @@ class DiracBilayer:
         th = np.linspace(-np.pi, np.pi, 4001)[1:-1]
         q = 2 * self.kF * np.abs(np.sin(th / 2))
         integ = self.V(q) * 0.5 * (1 + np.cos(th))
-        return self.nu * np.trapezoid(integ, th) / (2 * np.pi)
+        trap = getattr(np, "trapezoid", None) or np.trapz      # numpy < 2.0 compatibility
+        return self.nu * trap(integ, th) / (2 * np.pi)
 
 
 def _intraband_pi(b, D, qgrid, nphi=128):

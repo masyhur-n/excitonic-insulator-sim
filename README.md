@@ -23,6 +23,7 @@ at 300–350 K.
 ```bash
 pip install -r requirements.txt
 python run_benchmarks.py          # Table I: 15 pass, 2 documented deviations (~5 min; --fast skips 2 scans)
+                                  # no terminal (e.g. Pyto on iPad)? open pyto_run_benchmarks.py and press Run
 python paper/make_figures.py      # Figs. 1–4 -> paper/figs/
 python screening.py               # superfluid-onset line r_s,c(d/a_B), Fig. 2a (~8 min)
 python tc_ceiling.py              # screening ceiling, Eq. (3)
