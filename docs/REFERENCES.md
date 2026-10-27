@@ -78,9 +78,13 @@ Every reference used in the code, documentation or manuscript, with how it was c
 ## Software
 F. Pedregosa et al., *Scikit-learn*, J. Mach. Learn. Res. 12, 2825 (2011).
 
-## Still not read in full
-- L. V. Keldysh & Yu. V. Kopaev (1965); Yu. E. Lozovik & V. I. Yudson (1976). Both are background citations; the
-  bibliographic details are confirmed from later papers that cite them.
+## Removed from the manuscript (full text not obtained)
+- L. V. Keldysh & Yu. V. Kopaev, Sov. Phys. Solid State 6, 2219 (1965). A reprint exists in a World Scientific
+  volume, doi:10.1142/9789811279461_0006 (found via Crossref).
+- Yu. E. Lozovik & V. I. Yudson, Sov. Phys. JETP 44, 389 (1976). Available free from the JETP archive (jetp.ras.ru).
+The statements they supported are now cited to papers read in full: Kaneko et al. 2013 (BCS/BEC description of the
+EI), Pieri et al. 2007 (spatially separated e–h bilayers) and Min et al. 2008 (counterflow superfluidity). Either
+original can be re-added once its full text has been checked.
 
 ## Not sourced (stated as such in the manuscript)
 - The illustrative model parameters in `materials.py` (m_r, ε, r0, d, E_g) for
